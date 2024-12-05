@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Golly Juice Co.</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Good Golly</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -14,47 +14,39 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home"><i class="fas fa-home"></i></a></li>
-                <li><a href="#shop"><i class="fas fa-shopping-bag"></i></a></li>
-                <li><a href="#about"><i class="fas fa-info-circle"></i></a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#shop"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
-    </header>    
+    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <img src="gg.png" alt="Good Golly Character">
-            <h1>Cold-Pressed Juices, fresh ingredients, small batches.
-            </h1>
-            <p>So Pressed, So Clean.</p>
-            <button onclick="location.href='#products'">Shop Now</button>
+    <section class="hero">
+        <img src="good-golly-logo.png" alt="Good Golly Logo" class="hero-logo">
+        <h1>Cold-Pressed Juices, fresh ingredients, small batches.</h1>
+        <p>So Pressed, So Clean.</p>
+        <button>Shop Now</button>
+    </section>    
+    <div class="products">
+        <div class="product">
+            <img src="green-jar.png" alt="Wonder Greens">
+            <h3>Wonder Greens</h3>
+            <p>Kale, apple, celery, cucumber, lemon, ginger</p>
         </div>
-    </section>
-
-    <section id="products" class="products">
-        <h2>Our Juices</h2>
-        <div class="product-list">
-            <div class="product">
-                <img src="wondergreens.png" alt="Wonder Greens">
-                <h3>Wonder Greens</h3>
-                <p>Kale, apple, celery, cucumber, lemon, ginger</p>
-            </div>
-            <div class="product">
-                <img src="beetyboop.png" alt="Beety Boop">
-                <h3>Beety Boop</h3>
-                <p>Carrot, apple, beet, ginger, cucumber, lemon</p>
-            </div>
-            <div class="product">
-                <img src="missmolly.png" alt="Miss Molly">
-                <h3>Miss Molly</h3>
-                <p>Pineapple, carrot, lemon, orange, cucumber</p>
-            </div>
+        <div class="product">
+            <img src="red-jar.png" alt="Beety Boop">
+            <h3>Beety Boop</h3>
+            <p>Carrot, apple, beet, ginger, cucumber, lemon</p>
         </div>
-    </section> 
-    <footer>
-        <p>&copy; 2024 Good Golly Juice Co. | Contact: (559) 972-7319</p>
+        <div class="product">
+            <img src="orange-jar.png" alt="Miss Molly">
+            <h3>Miss Molly</h3>
+            <p>Pineapple, carrot, lemon, orange, cucumber</p>
+        </div>
+    </div>    
+    <footer id="contact">
+        <p>© 2024 Good Golly Juice Co. | Contact: <a href="tel:+15599727319">(559) 972-7319</a></p>
     </footer>
 </body>
 </html>
-

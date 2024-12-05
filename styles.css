@@ -6,25 +6,23 @@
     font-family: Arial, sans-serif;
 }
 
-/* Ensure No Horizontal Scrolling */
+/* Prevent Horizontal Scrolling */
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Disable horizontal scrolling */
     width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header Styling */
 header {
     display: flex;
-    justify-content: space-between; /* Align the logo and navigation horizontally */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
     background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .logo img {
@@ -33,14 +31,9 @@ header .logo img {
 
 nav ul {
     list-style: none;
-    display: flex; /* Keep navigation links in a row */
-    gap: 20px; /* Add spacing between links */
+    display: flex; /* Horizontal layout */
+    gap: 20px;
     margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
 }
 
 nav ul li a {
@@ -53,21 +46,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f9a825; /* Add mustard yellow hover effect */
+    color: #f9a825; /* Mustard yellow hover effect */
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     background-color: #f9a825; /* Mustard yellow */
     color: #fff;
     padding: 100px 20px;
-    overflow: hidden; /* Prevent content overflow */
 }
 
-.hero img {
-    max-width: 300px;
-    margin: 20px auto;
+.hero-logo {
+    max-width: 500px;
+    margin-bottom: 20px; /* Space between logo and text */
 }
 
 .hero h1 {
@@ -94,52 +85,25 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    font-size: 0.9rem;
-    position: relative;
-    width: 100%;
-}
-
-/* Fix for Containers */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Prevent Overflow for All Elements */
-body * {
-    max-width: 100vw;
-}
-
 /* Product Section */
 .products {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: space-around; /* Distribute evenly */
-    padding: 20px 5%;
-    gap: 20px;
-}
-
-.product {
-    flex: 1 1 calc(33.333% - 40px); /* 3 items per row */
-    text-align: center;
-    margin: 20px 0;
-    max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 40px; /* Space between items */
+    justify-items: center; /* Center content in each column */
+    text-align: center; /* Center text below jars */
+    margin: 0 auto; /* Center the grid itself */
+    width: 80%; /* Control the width of the grid */
 }
 
 .product img {
     max-width: 100px;
-    margin: 0 auto 15px;
+    margin-bottom: 15px; /* Space between the jar and text */
 }
 
 .product h3 {
     font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -148,36 +112,40 @@ body * {
     line-height: 1.4;
 }
 
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px;
+    }
+}
+
 /* Responsive Media Queries */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack logo and nav links vertically */
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        margin: 0;
-        padding: 0;
+        flex-direction: column;
+        align-items: center;
     }
-    
-    nav ul li {
-        display: inline-block;
+
+    .hero h1 {
+        font-size: 2rem;
     }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: #333;
-        font-size: 1.5rem; /* Adjust size for icons */
-        padding: 5px 10px;
-        transition: color 0.3s ease;
+
+    .hero p {
+        font-size: 1rem;
     }
-    
-    nav ul li a:hover {
-        color: #f9a825; /* Mustard yellow hover effect */
+
+    .products {
+        flex-direction: column;
     }
-    
+
+    .product {
+        flex: 1 1 90%;
+    }
 }
 

@@ -56,7 +56,7 @@ nav ul li a {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     margin: 10px 0;
 }
 
@@ -103,7 +103,7 @@ nav ul li a {
 }
 
 .product img {
-    max-width: 100%;
+    max-width: 25%;
     border-radius: 10px;
 }
 

@@ -17,41 +17,43 @@ html, body {
 /* Header Styling */
 header {
     display: flex;
-    justify-content: space-between; /* Align logo and nav links */
+    justify-content: space-between; /* Align the logo and navigation horizontally */
     align-items: center;
-    background-color: #fff;
     padding: 10px 5%;
-    position: sticky; /* Make header sticky */
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
 }
 
 header .logo img {
     max-width: 120px;
-    height: auto;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    display: flex; /* Keep navigation links in a row */
+    gap: 20px; /* Add spacing between links */
     margin: 0;
     padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
+    font-size: 1rem;
     font-weight: bold;
-    font-size: 1.1rem;
     padding: 5px 10px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f9a825; /* Mustard yellow hover */
+    color: #f9a825; /* Add mustard yellow hover effect */
 }
 
 /* Hero Section */
@@ -92,7 +94,6 @@ nav ul li a:hover {
     background-color: #555;
 }
 
-
 /* Footer */
 footer {
     text-align: center;
@@ -112,8 +113,39 @@ footer {
 }
 
 /* Prevent Overflow for All Elements */
-* {
+body * {
     max-width: 100vw;
+}
+
+/* Product Section */
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around; /* Distribute evenly */
+    padding: 20px 5%;
+    gap: 20px;
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 40px); /* 3 items per row */
+    text-align: center;
+    margin: 20px 0;
+    max-width: 300px;
+}
+
+.product img {
+    max-width: 100px;
+    margin: 0 auto 15px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 /* Responsive Media Queries */
@@ -124,7 +156,7 @@ footer {
     }
 
     nav ul {
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column; /* Stack navigation links vertically */
         gap: 10px;
     }
 
@@ -134,5 +166,15 @@ footer {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .products {
+        flex-direction: column; /* Stack product items */
+        align-items: center;
+    }
+
+    .product {
+        flex: 1 1 100%; /* Full width */
+        max-width: 100%;
     }
 }
